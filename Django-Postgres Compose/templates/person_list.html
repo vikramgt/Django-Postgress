@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Crud</title>
+</head>
+<body>
+    <div class="container mt-3">
+      <a href="{% url 'add_person'%}" >link to create a form</a>
+      <hr>
+      {% for data in queryset %}
+      <div class="list-group">
+      <table>
+        <tr><td>First Name: <a href="#" class="list-group-item list-group-item-action">{{data.first_name}}</a> |</td>
+       <td> Last Name: <a href="#" class="list-group-item list-group-item-action">{{data.last_name}}</a></td>
+        </tr>
+        </table>
+      </div>
+      {% endfor %}
+      <hr>  
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+    <title>Crud</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <form method="POST" action="">
+            {% csrf_token %}
+            <div class="form-group mb-3">
+                {{form.first_name}}
+               
+                {{form.name.errors}}
+            </div>
+            <div class="form-group mb-3">
+                {{form.last_name}}
+                {{form.age.errors}}
+            </div>
+            
+            <input type="submit" class="btn btn-outline-success" >
+            
+        </form>
+    </div>
+</body>
